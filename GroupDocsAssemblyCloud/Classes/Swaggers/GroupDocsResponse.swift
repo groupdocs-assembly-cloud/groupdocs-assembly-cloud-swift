@@ -30,11 +30,38 @@
 import Foundation
 
 
-/** The empty type used as a flag.              */
+/** Base class for all responses. */
 
-public struct FileResponse: Codable {
+public struct GroupDocsResponse: Codable {
 
+    /** Response status code. */
+    public var code: Int
+    /** Response status. */
+    public var status: String?
 
+    public init(code: Int, status: String?) {
+        self.code = code
+        self.status = status
+    }
+
+    // Encodable protocol methods
+
+    public func encode(to encoder: Encoder) throws {
+
+        var container = encoder.container(keyedBy: String.self)
+
+        try container.encode(self.code, forKey: "Code")
+        try container.encodeIfPresent(self.status, forKey: "Status")
+    }
+
+    // Decodable protocol methods
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: String.self)
+        var index: Int = 0
+        self.code = try container.decode(Int.self, forKey: "code")
+        self.status = try container.decodeIfPresent(String.self, forKey: "status")
+    }
 
 
 }
