@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="1" failures="0" disabled="0" errors="1" time="11.748666048049927" name="AssemblyApiTests">
+		<testcase classname="GroupDocsAssemblyCloudTests.AssemblyApiTests" name="testAssembleDocument" time="11.748666048049927">
+			<error message="threw error &#34;requestError(errorCode: 400&#44; message: Optional(&#34;&#60;HTTPURLResponse 0x00007f77b00019a0&#62; &#123; URL: https://api-qa.groupdocs.cloud/v1.0/assembly/assemble &#125;&#123; status: 400&#44; headers &#123;\n   \&#34;X-Robots-Tag\&#34; &#61; noindex&#44; nofollow;\n   \&#34;Content-Type\&#34; &#61; \&#34;application/json; charset&#61;utf-8\&#34;;\n   \&#34;Date\&#34; &#61; Mon&#44; 27 Apr 2020 03:24:02 GMT;\n   \&#34;Server\&#34; &#61; Microsoft-IIS/10.0;\n   \&#34;Content-Length\&#34; &#61; 254;\n   \&#34;X-Powered-By\&#34; &#61; ARR/3.0&#44; ASP.NET;\n&#125; &#125;&#34;))&#34;"></error>
+		</testcase>
+	</testsuite>
+	<testsuite tests="9" failures="0" disabled="0" errors="0" time="19.19425094127655" name="StorageTests">
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testCopyFile" time="2.8758450746536255"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testCreateFolder" time="0.874627947807312"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testCopyFolder" time="1.7525579929351807"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testMoveFile" time="2.783361077308655"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testDeleteFile" time="2.3285049200057983"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testMoveFolder" time="1.7106280326843262"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testDeleteFolder" time="4.625108003616333"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testGetFileList" time="1.135254979133606"></testcase>
+		<testcase classname="GroupDocsAssemblyCloudTests.StorageTests" name="testUploadFile" time="1.1083629131317139"></testcase>
+	</testsuite>
+</testsuites>
