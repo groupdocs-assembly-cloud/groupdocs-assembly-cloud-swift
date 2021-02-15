@@ -1,7 +1,7 @@
 /*
  * --------------------------------------------------------------------------------
  * <copyright company="Aspose" file="ErrorDetails.swift">
- *   Copyright (c) 2020 GroupDocs.Assembly for Cloud
+ *   Copyright (c) 2021 GroupDocs.Assembly for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,15 +30,15 @@ import Foundation
 // The error details
 public class ErrorDetails : Codable, AssemblyAPIModel {
     
-    // Field of requestId. The request id      
+    // Field of requestId. The request id.      
     private var requestId : String?;
     
-    // Field of date. Date      
-    private var date : Date?;
+    // Field of errorDateTime. Error datetime.      
+    private var errorDateTime : Date?;
         
     private enum CodingKeys: String, CodingKey {
         case requestId;
-        case date;
+        case errorDateTime;
         case invalidCodingKey;
     }
         
@@ -50,7 +50,7 @@ public class ErrorDetails : Codable, AssemblyAPIModel {
         
         let container = try decoder.container(keyedBy: CodingKeys.self);
         self.requestId = try container.decodeIfPresent(String.self, forKey: .requestId);
-        self.date = try container.decode(Date.self, forKey: .date);
+        self.errorDateTime = try container.decode(Date.self, forKey: .errorDateTime);
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -59,29 +59,29 @@ public class ErrorDetails : Codable, AssemblyAPIModel {
         if (self.requestId != nil) {
             try container.encode(self.requestId, forKey: .requestId);
         }
-        if (self.date == nil) {
-            throw AssemblyAPIError.requiredArgumentError(argumentName: "date");
+        if (self.errorDateTime == nil) {
+            throw AssemblyAPIError.requiredArgumentError(argumentName: "errorDateTime");
         }
-        try container.encode(self.date, forKey: .date);
+        try container.encode(self.errorDateTime, forKey: .errorDateTime);
     }
     
-    // Sets requestId. The request id  
+    // Sets requestId. The request id.  
     public func setRequestId(requestId : String?) {
         self.requestId = requestId;
     }
     
-    // Gets requestId. The request id  
+    // Gets requestId. The request id.  
     public func getRequestId() -> String? {
         return self.requestId;
     }
     
-    // Sets date. Date  
-    public func setDate(date : Date) {
-        self.date = date;
+    // Sets errorDateTime. Error datetime.  
+    public func setErrorDateTime(errorDateTime : Date) {
+        self.errorDateTime = errorDateTime;
     }
     
-    // Gets date. Date  
-    public func getDate() -> Date {
-        return self.date!;
+    // Gets errorDateTime. Error datetime.  
+    public func getErrorDateTime() -> Date {
+        return self.errorDateTime!;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * --------------------------------------------------------------------------------
  * <copyright company="Aspose" file="AssembleDocumentRequest.swift">
- *   Copyright (c) 2020 GroupDocs.Assembly for Cloud
+ *   Copyright (c) 2021 GroupDocs.Assembly for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,7 @@ public class AssembleDocumentRequest {
         self.assembleOptions = assembleOptions;
     }
     
-    // Assemble Options. It should be JSON with TemplateName, SaveFormat, ReportData and etc.             
+    // Assemble Options. It should be JSON or XML with TemplateFileInfo, SaveFormat, ReportData and etc.             
     public func getAssembleOptions() -> AssembleOptions {
         return self.assembleOptions;
     }

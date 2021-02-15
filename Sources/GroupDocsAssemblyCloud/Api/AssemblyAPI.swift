@@ -1,7 +1,7 @@
 /*
  * --------------------------------------------------------------------------------
  * <copyright company="Aspose" file="AssemblyAPI.swift">
- *   Copyright (c) 2020 GroupDocs.Assembly for Cloud
+ *   Copyright (c) 2021 GroupDocs.Assembly for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -701,7 +701,7 @@ public class AssemblyAPI {
             
             
             var formParams : [RequestFormParam] = [];
-            formParams.append(RequestFormParam(name: "file", body: try ObjectSerializer.serializeFile(value: request.getFile())));
+            formParams.append(RequestFormParam(name: "fileContent", body: try ObjectSerializer.serializeFile(value: request.getFileContent())));
             
             apiInvoker.invoke(
                 url: urlBuilder.url!,
