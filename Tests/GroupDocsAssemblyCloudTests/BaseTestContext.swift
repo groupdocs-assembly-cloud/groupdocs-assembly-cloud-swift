@@ -26,7 +26,7 @@ class BaseTestContext: XCTestCase {
     }
     
     public func uploadFile(file : URL, path : String) throws {
-        let req = UploadFileRequest(file: InputStream(url: file)!, path: path);
+        let req = UploadFileRequest(fileContent: InputStream(url: file)!, path: path);
         let res = try getApi().uploadFile(request: req);
         XCTAssert(res.getErrors()?.count == 0);
         XCTAssert(res.getUploaded()?.count == 1);
