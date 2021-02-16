@@ -1,7 +1,7 @@
 /*
  * --------------------------------------------------------------------------------
  * <copyright company="Aspose" file="UploadFileRequest.swift">
- *   Copyright (c) 2020 GroupDocs.Assembly for Cloud
+ *   Copyright (c) 2021 GroupDocs.Assembly for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,27 +29,27 @@ import Foundation
 
 // Request model for uploadFile operation.
 public class UploadFileRequest {
-    private let file : InputStream;
+    private let fileContent : InputStream;
     private let path : String;
     private let storageName : String?;
     
     private enum CodingKeys: String, CodingKey {
-        case file;
+        case fileContent;
         case path;
         case storageName;
         case invalidCodingKey;
     }
     
     // Initializes a new instance of the uploadFileRequest class.
-    public init(file : InputStream, path : String, storageName : String? = nil) {
-        self.file = file;
+    public init(fileContent : InputStream, path : String, storageName : String? = nil) {
+        self.fileContent = fileContent;
         self.path = path;
         self.storageName = storageName;
     }
     
     // File to upload
-    public func getFile() -> InputStream {
-        return self.file;
+    public func getFileContent() -> InputStream {
+        return self.fileContent;
     }
     
     // Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext              If the content is multipart and path does not contains the file name it tries to get them from filename parameter              from Content-Disposition header.

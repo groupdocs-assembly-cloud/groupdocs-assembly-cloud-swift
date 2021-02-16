@@ -1,7 +1,7 @@
 /*
  * --------------------------------------------------------------------------------
  * <copyright company="Aspose" file="ApiError.swift">
- *   Copyright (c) 2020 GroupDocs.Assembly for Cloud
+ *   Copyright (c) 2021 GroupDocs.Assembly for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,15 +42,15 @@ public class ApiError : Codable, AssemblyAPIModel {
     // Field of dateTime. Gets or sets server datetime.      
     private var dateTime : Date?;
     
-    // Field of innerApiError. Gets or sets inner error.      
-    private var innerApiError : ApiError?;
+    // Field of innerError. Gets or sets inner error.      
+    private var innerError : ApiError?;
         
     private enum CodingKeys: String, CodingKey {
         case code;
         case message;
         case _description;
         case dateTime;
-        case innerApiError;
+        case innerError;
         case invalidCodingKey;
     }
         
@@ -65,7 +65,7 @@ public class ApiError : Codable, AssemblyAPIModel {
         self.message = try container.decodeIfPresent(String.self, forKey: .message);
         self._description = try container.decodeIfPresent(String.self, forKey: ._description);
         self.dateTime = try container.decodeIfPresent(Date.self, forKey: .dateTime);
-        self.innerApiError = try container.decodeIfPresent(ApiError.self, forKey: .innerApiError);
+        self.innerError = try container.decodeIfPresent(ApiError.self, forKey: .innerError);
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -83,8 +83,8 @@ public class ApiError : Codable, AssemblyAPIModel {
         if (self.dateTime != nil) {
             try container.encode(self.dateTime, forKey: .dateTime);
         }
-        if (self.innerApiError != nil) {
-            try container.encode(self.innerApiError, forKey: .innerApiError);
+        if (self.innerError != nil) {
+            try container.encode(self.innerError, forKey: .innerError);
         }
     }
     
@@ -128,13 +128,13 @@ public class ApiError : Codable, AssemblyAPIModel {
         return self.dateTime;
     }
     
-    // Sets innerApiError. Gets or sets inner error.  
-    public func setInnerApiError(innerApiError : ApiError?) {
-        self.innerApiError = innerApiError;
+    // Sets innerError. Gets or sets inner error.  
+    public func setInnerError(innerError : ApiError?) {
+        self.innerError = innerError;
     }
     
-    // Gets innerApiError. Gets or sets inner error.  
-    public func getInnerApiError() -> ApiError? {
-        return self.innerApiError;
+    // Gets innerError. Gets or sets inner error.  
+    public func getInnerError() -> ApiError? {
+        return self.innerError;
     }
 }
